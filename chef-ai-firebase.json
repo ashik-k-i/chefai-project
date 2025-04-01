@@ -1,13 +1,13 @@
 {
   "type": "service_account",
-  "project_id": "chef-ai-analyser",
-  "private_key_id": "2a60cdd1e21f165e83500d696bd97ffbd6b599b0",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCnBakc5K7h/mdc\nDJraBvJqvl4tAmiewR++eZsikTE2j6NI1IcfV3yGi+KX327PZ3iPgQJG4EkNkyT+\n8t6vB7nJD23145xfIdb7ZlsDxwbcXHFpNHN4GDOoqmB5ICwvzL8UbmeSG3z15auU\nrfBNUci54hiTgIUkRrhQRIXZbfRhV/DuzYGm2IJ0goL6HTVEbSrGYYOvjlu7C92+\n+E755XZtU+SrXfQHoH8E9NXhQNKLwhs54wZxyGW3N+QX7YX83E6lHCDa+2Uy32Dx\n5WXJ1iNU9LsukI0zbpnAodh6b3OUHLp/1TlbuoqtzUDbAl8r1hOEGkVOYs/akxLC\nV6KuS3lfAgMBAAECggEAIe1X71sSnSyA0WVsFSrBFmbKGYl6N/lR2e640Ro+LW+b\nAwHM2tR6IpiKtD/6Md46Uqgpjr0jicLgintKObKvjgR42TBdhMOKeHHPviIxJhUP\nIog5hmUgJTxKsYAUCbek/uD4X+j+hrKbGm4EuKgKxpuDU38RTI+jBAcPS132/Mi8\nWphalELr1EzptgcNbBdKKoNQrmptFFeDBHFUVMRhHcNguSJEMEidsj8LzzdTlGgC\nNjUzap0xO6Z5OcnHwN0+bR/ls0R9e4cS7OCcqBhncJQ7kAobEjV0d15iowl5Xnaf\n9bZGkJZl3ZGHdYpKvvWLWereJwhthjZIKfgGsNaEpQKBgQDlvIZhhQxziNaINnbx\nkfkSwT/9xUAQs47cy9X8A+8CGGzep/k7aTod+dbraAhaOSxVwr70t1HQpuFGJvp4\noRGVRtWqo6vzCHOZI4PG3A6gqSvzuVKXxLx9E3peEt6sDgMlAIX1AMgdBsA/PeSh\nrsBKlrv/JzKHKgG9cAgSY3MXhQKBgQC6Hbx0TLppuHoMayhHngR6ShSlFS1aI4/6\nE2ydNMYLhnBsJNDCTNRu2m5r4v4rHn040AsHgtuBJ3Vgt6JXxqwr7JcxYQHMwhPj\n9bwi0Gn0oOz1LooeAHMLMKbxxFa5xoo5tyYvsfko5Wp2u6YOdiWnPxxo51fjGrO6\nhkHSGaaYkwKBgGXH11VfJ7wL9NfWIW42+L1pZptch1ye4H1LxVrotzwbbChdDNtY\nbEoZhTE4HvMx/0VjiUxL53Bkbsuwuyk0WuDiyAjYiHac2PIQvPIeTlC5gmJxSXk5\nzTQwq/b/ry1U6+m5yJ9aIE5Tzlp2ZlOHY2PoUhPh3s3pO2odN0ZGTxgtAoGANQaj\n2r7Bnb1hiIg/QahTvkO8/gu6kCPxsV43Y9LVWhNDlIworjMVkz/IlhRmNgLJypX7\njnhJ8dI8LwIizr9b7mfJ69enm57v69Lnd0PJ7FitKm3IDCQ0osuJxPgbfXKDj04P\nIyehxXUXkByGgzhGIhBpF7pR3/KLomj99843GOECgYEAua3xJuCUHKsqGqq3a5kK\nEc6wMyvTPxcNV9aZVz+cMXj1u/UZidyP0/IWQpD1htlIeKisEq4oI/HovNTsVG9u\n2SJzR0oKn5IGtIJjhAJeNDYCqZUBh/hhlJA6AXW/rlNr6jgcR6NAaoxEotIAyeL5\nKvMRvTzRLOui/Jv0GgReouc=\n-----END PRIVATE KEY-----\n",
-  "client_email": "firebase-adminsdk-4jx8w@chef-ai-analyser.iam.gserviceaccount.com",
-  "client_id": "102827012714985165097",
+  "project_id": "",
+  "private_key_id": "",
+  "private_key": "",
+  "client_email": "",
+  "client_id": "",
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
   "token_uri": "https://oauth2.googleapis.com/token",
   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-4jx8w%40chef-ai-analyser.iam.gserviceaccount.com",
+  "client_x509_cert_url": "",
   "universe_domain": "googleapis.com"
 }
