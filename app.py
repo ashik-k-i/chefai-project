@@ -14,13 +14,13 @@ cred = credentials.Certificate("chef-ai-firebase.json")
 
 
 firebase_admin.initialize_app(cred, {
-    'databaseURL': 'https://chef-ai-analyser-default-rtdb.firebaseio.com'  # Replace with your database URL
+    'databaseURL': ''  # Replace with your database URL
 })
 
 # Firebase Auth API URL for creating a user
-FIREBASE_SIGNUP_URL = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDlKYoxr4ptCMSeumnkaxziQzAHHiR3H40'
+FIREBASE_SIGNUP_URL = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=YOUR_API_KEY_HERE'
 
-FIREBASE_SIGNIN_URL = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDlKYoxr4ptCMSeumnkaxziQzAHHiR3H40'
+FIREBASE_SIGNIN_URL = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=YOUR_API_KEY_HERE'
 
 
 
