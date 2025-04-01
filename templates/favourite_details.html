@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourite Details</title>
+    <style>
+        *{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: #fff2dd;
+    padding: 25px;
+}
+    </style>
+</head>
+<body>
+
+    <div id="favourite-details">
+        <h1 id="favourite-title"></h1>
+        <hr>
+        <br>
+        <div id="favourite-content"></div>
+    </div>
+
+    <script>
+        // Retrieve title and htmlContent from localStorage
+        const title = localStorage.getItem('favouriteTitle');
+        const htmlContent = localStorage.getItem('favouriteHtmlContent');
+
+        // Display the title and htmlContent
+        if (title && htmlContent) {
+            document.getElementById('favourite-title').textContent = title;
+            document.getElementById('favourite-content').innerHTML = htmlContent;
+        } else {
+            document.getElementById('favourite-details').innerHTML = 'Favourite not found';
+        }
+    </script>
+
+</body>
+</html>

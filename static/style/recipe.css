@@ -1,0 +1,169 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#bg{
+    background-color: #fff2dd;
+    height: 100vh;
+    width: 100vw;
+
+}
+#toolbar{
+    width: 100%;
+    height: 70px;
+    background-color: #FFE8C5;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+#img-logo{
+    width: auto;
+    height: 40px;
+    margin-left: 2rem;
+    
+}
+
+#toolbar-space{
+    flex: 1;
+}
+
+#re-gen{
+    font-size: 26px;
+    font-weight: 600;
+    color: #6B4100;
+    padding: 1px;
+    padding-left: 15px;
+    padding-top: 8px;
+    font-family: Arial, sans-serif;
+}
+
+#app-body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+#inp-boxes{
+    width: 70%;
+    height: auto;
+   
+    
+}
+
+#btns-div{
+    width: 85%;
+    height: 100px;
+}
+
+
+#inp-box-div-1{
+    width: 100%;
+    height: auto;
+    
+    padding: 0px;
+    padding-top: 10px;
+}
+
+#inp-box-div-2{
+    width: 100%;
+    height: auto;
+    
+    padding-top: 10px;
+}
+
+#inp-box-div-3{
+    width: 100%;
+    height: 100%;
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#for-btns{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+#btw-btn{
+    width: 30px;
+}
+
+#btn-rst{
+    padding: 8px 20px 8px 20px;
+    margin: 10px;
+    border: 0px;
+    background-color: transparent;
+    color: #a88756;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#btn-gnrt{
+    padding: 8px 20px 8px 20px;
+    margin: 10px;
+    margin-right: 20px;
+    border: 0px;
+    background-color: transparent;
+    color: #6B4100;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#btn-gnrt:hover{
+    background-color: #FFE8C5;
+}
+#btn-rst:hover{
+    color: #6B4100;
+
+}
+
+
+#ingrediants-inp{
+    width: calc(100% - 16px);
+    padding: 8px;
+    height: 100px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    color: #6B4100;
+    
+}
+
+#ingrediants-inp::placeholder {
+    color: #a88756; /* Set the desired color */
+   /* Optional: Make placeholder text italic */
+    font-size: 14px; /* Optional: Change font size */
+    padding: 8px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+textarea:focus {
+    outline: none; /* Removes the default focus outline */
+    border: 1px solid #007BFF; /* Optional: Custom border color on focus */
+}
+
+
+#inp-box-div-3-in{
+    padding: 10px;
+    background-color: #6B4100;
+    margin: 8px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 8px;
+
+}
+#inp-sub-txt-3{
+    font-size: 16px;
+    font-weight: 600;
+    color: #6B4100;
+    padding: 1px;
+    padding-left: 15px;
+    padding-top: 8px;
+    font-family: Arial, sans-serif;
+   
+}

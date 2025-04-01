@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chefai Generated Recipe</title>
+    <link href="./static/style/gen.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <style>
+        #tts-btn {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        #tts-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="bg">
+        <div id="for-anim">
+            <div id="animation"></div>
+            <p id="txt"></p>
+        </div>
+        <div id="result">
+            <div id="toolbar">
+                <img src="./static/images/logo.png" id="img-logo">
+                <div id="toolbar-space"></div>
+                <div id="menu-div">
+                    <img src="./static/images/love.png" id="img-menu">
+                </div>
+                <div id="tts-btn">
+                    <button id="tts-button">🔊</button>
+                </div>
+            </div>
+            <div id="result-in" class="wrapped-text"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js"></script>
+    <script>
+        // Load the Lottie animation
+        lottie.loadAnimation({
+            container: document.getElementById('animation'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: './static/anim/chef_anim.json',
+        });
+
+
+        window.speechSynthesis.onvoiceschanged = function () {
+    let voices = window.speechSynthesis.getVoices();
+    console.log(voices);
+};
+
+
+        // Parse URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const language = params.get("language");
+        console.log("hsgdfksbdf : ",language);
+
+        // Text-to-Speech functionality
+        let ttsButton = document.getElementById("tts-button");
+        let speechSynthesisInstance = window.speechSynthesis;
+        let speech;
+        let isSpeaking = false;
+
+        ttsButton.addEventListener("click", function() {
+            if (isSpeaking) {
+                speechSynthesisInstance.cancel();
+                this.textContent = '🔊';
+                isSpeaking = false;
+            } else {
+                let textContent = document.getElementById("result-in").innerText;
+                if (textContent.trim() !== "") {
+                    speech = new SpeechSynthesisUtterance(textContent);
+                    speech.lang = (language === "Malayalam") ? "ml-IN" : "en-US";
+                    speech.rate = 1;
+                    speech.pitch = 1;
+                    speechSynthesisInstance.speak(speech);
+                    this.textContent = '⏹️'; 
+                    isSpeaking = true;
+                    speech.onend = function() {
+                        ttsButton.textContent = '🔊';
+                        isSpeaking = false;
+                    };
+                } else {
+                    alert("No content to read aloud!");
+                }
+            }
+        });
+    </script>
+    <div class="toast" id="toast-message">Select and Fill The Options !</div>
+    <div id="save-fav-dialog" class="save-fav-dialog">
+        <div class="dialog-content">
+            <h3>Enter Title to Save</h3>
+            <input type="text" id="fav-title" placeholder="Enter title here..." />
+            <div class="dialog-actions">
+                <button id="save-fav-btn">Save</button>
+                <button id="cancel-fav-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./static/script/script3.js"></script>
+</body>
+</html>

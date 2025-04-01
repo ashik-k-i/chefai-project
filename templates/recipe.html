@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+ 
+    <link href="./static/style/recipe.css" rel="stylesheet">
+</head>
+<body>
+    <div id="bg">  <!-- BG Start -->
+
+        <!-- Toolbar Start -->
+
+        <div id="toolbar">
+            <p id="re-gen">Recipe Generator</p>
+            <div id="toolbar-space"></div>
+            
+            
+        </div>
+
+        <!-- Toolbar End -->
+
+        <!-- Body Start -->
+
+        <div id="app-body">
+
+
+            <!-- input boxes Div Start -->
+             <div id="inp-boxes">
+
+               
+
+                <div id="inp-right">
+
+                    <div id="inp-box-div-3">
+                        <p id="inp-sub-txt-3">Food Name:</p>
+
+                        <div id="inp-box-div-3-in">
+
+
+
+                        <textarea id="ingrediants-inp" placeholder="Type your favourite food here...">
+
+                        </textarea>
+
+                        </div>
+
+
+                    </div>
+
+                    </div>
+
+                </div>
+
+             </div>
+             <!-- input boxes Div Start -->
+
+
+
+             <!-- buttons Div Start -->
+             <div id="btns-div">
+
+                <div id="for-btns">
+                    <button id="btn-rst">Record</button>
+                    <div id="btw-btn"></div>
+                    <button id="btn-gnrt">Generate</button>
+                </div>
+
+                
+             </div>
+             <!-- buttons Div Start -->
+            
+
+        </div>
+
+         <!-- Body End -->
+
+    </div>  <!-- BG End -->
+
+
+
+
+
+
+<!-- Overlay -->
+<div id="overlay" class="overlay" style="display:none;"></div>
+
+<!-- Dialog Box -->
+<div id="options-menu" class="options-menu" style="display:none;">
+    <div class="dialog-content">
+        <h2>Menu</h2>
+        <ul>
+            <li class="menu-item">
+                <span class="icon">&#x1F4E7;</span> <!-- Icon for "Language" -->
+                <a href="#">Language</a>
+            </li>
+            <li class="menu-item">
+                <span class="icon">&#x2764;&#xFE0F;</span> <!-- Icon for "Favourite" -->
+                <a href="/fav">Favourite</a>
+            </li>
+            <li class="menu-item">
+                <span class="icon">&#x1F373;</span> <!-- Icon for "Recipe Maker" -->
+                <a href="#">Recipe Maker</a>
+            </li>
+        </ul>
+        <button onclick="closeDialog()">Close</button>
+    </div>
+</div>
+
+      
+
+
+
+    <script src="./static/script/script4.js"></script>
+
+    <script>
+        let isRecording = false;
+        let recognition;
+
+        document.getElementById('btn-rst').addEventListener('click', () => {
+            if (!isRecording) {
+                startRecording();
+            } else {
+                stopRecording();
+            }
+        });
+
+        function startRecording() {
+            recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+            recognition.lang = 'en-US';  // Set the language for recognition
+            recognition.start();
+            isRecording = true;
+            document.getElementById('btn-rst').innerText = 'Recording';
+
+            recognition.onresult = event => {
+                const transcript = event.results[0][0].transcript;
+                console.log('Recognized text:', transcript);
+                document.getElementById("ingrediants-inp").value = transcript;  // Print the recognized text in the console
+            };
+
+            recognition.onerror = event => {
+                console.error('Speech recognition error:', event.error);
+            };
+        }
+
+        function stopRecording() {
+            recognition.stop();
+            isRecording = false;
+            document.getElementById('btn-rst').innerText = 'Record';
+        }
+    </script>
+    
+</body>
+</html>

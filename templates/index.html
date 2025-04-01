@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef AI</title>
+    <link rel="stylesheet" href="./static/style/index.css">
+</head>
+<body>
+    <div id="bg">
+        <div id="logo-bg">
+        <img src="./static/images/logo.png" id="logo">
+
+
+    </div>
+
+        <p id="txt">Loading</p>
+
+    </div>
+
+
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "{{ url_for('home_page') }}";
+        }, 3000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+ 
+    <link href="./static/style/home.css" rel="stylesheet">
+</head>
+<body>
+    <div id="bg">  <!-- BG Start -->
+
+        <!-- Toolbar Start -->
+
+        <div id="toolbar">
+            <img src="./static/images/logo.png" id="img-logo">
+            <div id="toolbar-space"></div>
+            <div id="menu-div">
+                <img src="./static/images/menu.png" id="img-menu">
+            </div>
+            
+        </div>
+
+        <!-- Toolbar End -->
+
+        <!-- Body Start -->
+
+        <div id="app-body">
+
+
+            <!-- input boxes Div Start -->
+             <div id="inp-boxes">
+
+                <div id="inp-left">
+
+                    <div id="inp-box-div-1">
+
+                        <p id="inp-sub-txt-1">Food Type</p>
+                        <div id="inp-box-1">
+                            <div id="inp-box-1-in">
+
+                                <div id="select-food-type-div">
+                                    <p id="select-food-type-txt">Select</p>
+                                </div>
+                            
+                            <img src="./static/images/drop_down.png" id="drop-down-1">
+                        </div>
+                    </div>
+                        
+                    </div>
+
+                    <div id="inp-box-div-2">
+
+                        <p id="inp-sub-txt-2">Time</p>
+
+                        <div id="inp-box-2">
+
+                            <div id="inp-box-2-in">
+
+                                <div id="select-time-div">
+                                    <p id="select-time-txt">Select</p>
+                                </div>
+
+                            
+                            <img src="./static/images/drop_down.png" id="drop-down-2">
+                        </div>
+                            
+                        </div>
+                        
+                    </div>
+
+
+
+
+                </div>
+
+                <div id="inp-right">
+
+                    <div id="inp-box-div-3">
+                        <p id="inp-sub-txt-3">Ingrediants</p>
+
+                        <div id="inp-box-div-3-in">
+
+
+
+                        <textarea id="ingrediants-inp" placeholder="Enter your text here...">
+
+                        </textarea>
+
+                        </div>
+
+
+                    </div>
+
+                    </div>
+
+                </div>
+
+             </div>
+             <!-- input boxes Div Start -->
+
+
+
+             <!-- buttons Div Start -->
+             <div id="btns-div">
+
+                <div id="for-btns">
+                    <button id="btn-rst">Reset</button>
+                    <div id="btw-btn"></div>
+                    <button id="btn-gnrt">Generate</button>
+                </div>
+
+                
+             </div>
+             <!-- buttons Div Start -->
+            
+
+        </div>
+
+         <!-- Body End -->
+
+    </div>  <!-- BG End -->
+
+
+
+    <div class="dialog-overlay" id="dialog-overlay">
+        <div id="dialog-box">
+          <h3>Select Food Type</h3>
+          <div id="options">
+            <button data-value="kerala">Kerala</button>
+            <button data-value="Continental">Continental</button>
+            <button data-value="Traditional">Traditional</button>
+            <button data-value="Chinese">Chinese</button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="dialog-overlay" id="dialog-overlay2">
+        <div id="dialog-box2">
+          <h3>Select Food Type</h3>
+          <div id="options2">
+            <button data-value="Auto">Auto</button>
+            <button data-value="2 Minutes">2 Minutes</button>
+            <button data-value="5 Minutes">5 Minutes</button>
+            <button data-value="10 Minutes">10 Minutes</button>
+            <button data-value="30 Minutes">30 Minutes</button>
+            <button data-value="60 Minutes">60 Minutes</button>
+            <button data-value="120 Minutes">120 Minutes</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="toast" id="toast-message">Select and Fill The Options !</div>
+
+
+
+
+
+<!-- Overlay -->
+<div id="overlay" class="overlay" style="display:none;"></div>
+
+<!-- Dialog Box -->
+<div id="options-menu" class="options-menu" style="display:none;">
+    <div class="dialog-content">
+        <h2>Menu</h2>
+        <ul>
+            <li class="menu-item">
+                <span class="icon">&#x1F4E7;</span> <!-- Icon for "Language" -->
+                <a href="{{ url_for('toggle_language') }}">Language <i>({{ language }})</i></a>
+            </li>
+            <li class="menu-item">
+                <span class="icon">&#x2764;&#xFE0F;</span> <!-- Icon for "Favourite" -->
+                <a href="/fav">Favourite</a>
+            </li>
+            <li class="menu-item">
+                <span class="icon">&#x1F373;</span> <!-- Icon for "Recipe Maker" -->
+                <a href="/recipe">Recipe Maker</a>
+            </li>
+        </ul>
+        <button onclick="closeDialog()">Close</button>
+    </div>
+</div>
+
+      
+
+
+
+    <script src="./static/script/script.js"></script>
+    
+</body>
+</html>
